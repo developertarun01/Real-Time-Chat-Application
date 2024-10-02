@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatWithUs</title>
+    <!-- <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script> -->
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="JavaScript/client.js"></script>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+
+<body>
+    <nav>
+        <img class="logo" src="img.png" alt="Logo">
+        Welcome to Real Time Chat Application
+    </nav>
+    <div class="box">
+        <div class="online">
+            <div class="online2">Online:</div>
+            <div class="name" id="me"></div>
+            <!-- <div class"name"> Tarun</div> -->
+        </div>
+        <div class="container">
+            <!-- <div class="message left">Harry: Hey How are you ?</div> -->
+            <!-- <div class="message right">Harry: Hey How are you ?</div> -->
+        </div>
+        <div class="send">
+            <form action="" id="send-container">
+                <input type="text" name="messageInp" id="messageInp">
+                <button class="btn" type="submit">Send</button>
+            </form>
+        </div>
+</body>
+
+</html>
