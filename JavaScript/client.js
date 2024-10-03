@@ -28,11 +28,11 @@ const name = prompt("Enter your Name to Join")
 socket.emit('new-user-joined', name);
 
 const me = document.getElementById('me');
-me.innerHTML = name 
-
+me.innerHTML = name
+ 
 socket.on('user-joined', name =>{
     append(`${name} joined the Chat !`, 'left')
-    append1(", " +`${name}`)
+    append1(', '+ `${name}`)
 })
 
 socket.on('recieve', data =>{
@@ -41,11 +41,10 @@ socket.on('recieve', data =>{
 
 socket.on('left', name =>{
     append(`${name} left the Chat !`, 'left')
-    append1('')
+    delete1(name)
 })
-
 const nameContainer = document.querySelector('.online')
-const append1 = (name) =>{
+const append1 = name =>{
     const nameElement = document.createElement('div');
     nameElement.innerText = name;
     nameElement.classList.add('name');
